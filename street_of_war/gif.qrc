@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Ryu-hdstance.gif</file>
+        <file>streetFondo.png</file>
+        <file>FondoStreet1.png</file>
+        <file>Ken-hdstance.gif</file>
+        <file>Guile-hdstance.gif</file>
+        <file>giphy.gif</file>
+    </qresource>
+</RCC>
