@@ -23,6 +23,7 @@ private slots:
 
 private:
     Ui::principal *ui;
+    QGraphicsScene* scene;
     ventana1 *N;
 
 };

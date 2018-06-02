@@ -1,13 +1,48 @@
 #include "personajes.h"
 
-personajes::personajes()
+personajes::personajes(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
 {
+    setPixmap(QPixmap(":/Ryu-hdstance"));
+    if(tipj){
+        setPos(100,20);
+        tipj=0;
+    }
+
+    else{
+        setPosx(1000);
+        setPos(1000,20);
+        tipj=1;
+    }
 
 }
 
+/*QRectF personajes::boundingRect() const
+{
+    return QRect(50,20,60,100);
+}
+
+void personajes::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+    painter->setBrush(Qt::darkBlue);
+    painter->drawEllipse(boundingRect());
+
+    QPixmap pixmap;
+    pixmap.load(":/giphy.gif");
+    painter->drawPixmap(boundingRect(),pixmap,pixmap.rect());
+    //if(cont==0){
+        //cont=1;
+    //}
+    /*else{
+        pixmap.load(":/war");
+        painter->drawPixmap(boundingRect(),pixmap,pixmap.rect());
+        cont=0;
+    } *
+
+}*/
+
 void personajes::CargarA()
 {
-
+    setPos(posx,posy);
 }
 
 float personajes::getPosx() const
@@ -49,34 +84,3 @@ void personajes::setFuerza(int value)
 {
     fuerza = value;
 }
-/*
-bool personajes::getSaltar() const
-{
-    return saltar;
-}
-
-void personajes::setSaltar(bool value)
-{
-    saltar = value;
-}
-
-bool personajes::getPatada() const
-{
-    return patada;
-}
-
-void personajes::setPatada(bool value)
-{
-    patada = value;
-}
-
-bool personajes::getGolpe() const
-{
-    return golpe;
-}
-
-void personajes::setGolpe(bool value)
-{
-    golpe = value;
-}
-*/

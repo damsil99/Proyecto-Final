@@ -1,7 +1,7 @@
 #ifndef VENTANA1_H
 #define VENTANA1_H
 
-
+#include"gameover.h"
 #include <QWidget>
 #include <Qmovie>
 #include <Qsize>

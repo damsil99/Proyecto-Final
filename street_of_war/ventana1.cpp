@@ -2,6 +2,7 @@
 #include "ui_ventana1.h"
 #include "principal.h"
 
+
 ventana1::ventana1(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ventana1)
@@ -28,6 +29,7 @@ ventana1::ventana1(QWidget *parent) :
     movie2->start();
     movie3->start();
     movie4->start();
+    //ui->gif1->setPos();
     connect(ui->kent,SIGNAL(clicked(bool)),this,SLOT(jugador1()));
     connect(ui->killer,SIGNAL(clicked(bool)),this,SLOT(jugador2()));
     connect(ui->ryu,SIGNAL(clicked(bool)),this,SLOT(jugador3()));
@@ -43,21 +45,65 @@ void ventana1::jugador1(){
     if(band){
         //ui->
         band=0;
+        GameOver *M =new GameOver;
+        M->setFondo(":/Escenario1.png");//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->show();                        //Se muestra el MainWindow
         close();
+
     }
     else{
-    on_textBrowser_highlighted("ingresa el segundo personaje ");
-   // ui->
+    on_textBrowser_highlighted("        INGRESE EL SEGUNDO PERSONAJE ");
+    //ui->
+    band=1;
     }
 }
 void ventana1::jugador2(){
-    on_textBrowser_highlighted("ingresa el segundo personaje ");
+    if(band){
+        //ui->
+        band=0;
+        GameOver *M =new GameOver;
+        M->setFondo(":/calle.jpg");//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->show();                        //Se muestra el MainWindow
+        close();
+
+    }
+    else{
+    on_textBrowser_highlighted("        INGRESE EL SEGUNDO PERSONAJE ");
+    //ui->
+    band=1;
+    }
 }
 void ventana1::jugador3(){
-    on_textBrowser_highlighted("ingresa el segundo personaje ");
+    if(band){
+        //ui->
+        band=0;
+        GameOver *M =new GameOver;       //Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->setFondo(":/Escenario1.png");
+        M->show();                        //Se muestra el MainWindow
+        close();
+
+    }
+    else{
+    on_textBrowser_highlighted("        INGRESE EL SEGUNDO PERSONAJE ");
+    //ui->
+    band=1;
+    }
 }
 void ventana1::jugador4(){
-    on_textBrowser_highlighted("ingresa el segundo personaje ");
+    if(band){
+        //ui->
+        band=0;
+        GameOver *M =new GameOver;
+        M->setFondo(":/calle.jpg");//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->show();                        //Se muestra el MainWindow
+        close();
+
+    }
+    else{
+    on_textBrowser_highlighted("        INGRESE EL SEGUNDO PERSONAJE ");
+    //ui->
+    band=1;
+    }
 }
 void ventana1::on_volver_clicked()
 {
@@ -68,5 +114,6 @@ void ventana1::on_volver_clicked()
 
 void ventana1::on_textBrowser_highlighted(const QString &arg1)
 {
+    ui->textBrowser->clear();
     ui->textBrowser->append(arg1);
 }

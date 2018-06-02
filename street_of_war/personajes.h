@@ -2,17 +2,22 @@
 #define PERSONAJES_H
 #include<iostream>
 #include <QPainter>
+#include <QGraphicsScene>
 #include<QGraphicsItem>
+#include <QGraphicsRectItem>
 #include <QMainWindow>
+#include <QObject>
+#include <QGraphicsPixmapItem>
+class personajes:public QObject,
+                 public QGraphicsPixmapItem
 
-using namespace std;
-class personajes
 {
-public:
-    personajes();
-    QRectF boundingRect() const;
-    void paint(QPainter *painter,const QStyleOptionGraphicsItem *option, QWidget *widget);
+    Q_OBJECT
 
+public:
+    //QRectF boundingRect() const;
+    //void paint(QPainter *painter,const QStyleOptionGraphicsItem *option, QWidget *widget);
+    personajes(QGraphicsItem* carr = 0);
     void CargarA();
 
     float getPosx() const;
@@ -34,8 +39,9 @@ private:
     float posy=0;
     int resistencia;
     int fuerza;
+    bool tipj=1;
     //string imagen;
-    QList<string>MovPers;
+    //QList<string>MovPers;
 
 };
 

@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QWidget>
 
@@ -21,12 +22,16 @@ QT_BEGIN_NAMESPACE
 class Ui_GameOver
 {
 public:
+    QGraphicsView *graphicsView;
 
     void setupUi(QWidget *GameOver)
     {
         if (GameOver->objectName().isEmpty())
             GameOver->setObjectName(QStringLiteral("GameOver"));
-        GameOver->resize(400, 300);
+        GameOver->resize(1600, 600);
+        graphicsView = new QGraphicsView(GameOver);
+        graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        graphicsView->setGeometry(QRect(5, 21, 1600, 600));
 
         retranslateUi(GameOver);
 

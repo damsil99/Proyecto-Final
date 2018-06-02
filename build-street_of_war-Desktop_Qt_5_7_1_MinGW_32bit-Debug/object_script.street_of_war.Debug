@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\principal.o
+./debug\personajes.o
+./debug\ventana1.o
+./debug\gameover.o
+./debug\qrc_gif.o
+./debug\moc_principal.o
+./debug\moc_personajes.o
+./debug\moc_ventana1.o
+./debug\moc_gameover.o
+);

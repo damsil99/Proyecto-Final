@@ -7,6 +7,10 @@ principal::principal(QWidget *parent) :
 {
     ui->setupUi(this);
     N = new ventana1();
+    scene=new QGraphicsScene(0,0,350,250);
+    ui->graphicsView->setScene(scene);
+    ui->graphicsView->setRenderHint(QPainter::Antialiasing);
+    ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/FondoStreet1.png")));
 }
 
 principal::~principal()
