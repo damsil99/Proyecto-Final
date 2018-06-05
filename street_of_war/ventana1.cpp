@@ -8,15 +8,17 @@ ventana1::ventana1(QWidget *parent) :
     ui(new Ui::ventana1)
 {
     ui->setupUi(this);
-    scene=new QGraphicsScene(0,0,350,250);
+    scene=new QGraphicsScene(0,0,400,350);
     ui->graphicsView->setScene(scene);
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
-    ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/FondoStreet1.png")));
+    //QBrush x(QImage(":/jugador1"));
+
+    ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/jugador1")));
     QSize size(70, 70);
-    QMovie *movie = new QMovie(":/Ryu-hdstance.gif");
-    QMovie *movie2 = new QMovie(":/Ken-hdstance.gif");
+    QMovie *movie = new QMovie(":/Ken-hdstance.gif");
+    QMovie *movie2 = new QMovie(":/Ryu-hdstance.gif");
     QMovie *movie3 = new QMovie(":/Guile-hdstance.gif");
-    QMovie *movie4 = new QMovie(":/giphy.gif");
+    QMovie *movie4 = new QMovie(":/C.4.1.gif");
     movie->setScaledSize(size);
     movie2->setScaledSize(size);
     movie3->setScaledSize(size);
@@ -30,9 +32,9 @@ ventana1::ventana1(QWidget *parent) :
     movie3->start();
     movie4->start();
     //ui->gif1->setPos();
-    connect(ui->kent,SIGNAL(clicked(bool)),this,SLOT(jugador1()));
-    connect(ui->killer,SIGNAL(clicked(bool)),this,SLOT(jugador2()));
-    connect(ui->ryu,SIGNAL(clicked(bool)),this,SLOT(jugador3()));
+    connect(ui->kent,SIGNAL(clicked(bool)),this,SLOT(jugador2()));
+    connect(ui->ryu,SIGNAL(clicked(bool)),this,SLOT(jugador1()));
+    connect(ui->killer,SIGNAL(clicked(bool)),this,SLOT(jugador3()));
     connect(ui->sold,SIGNAL(clicked(bool)),this,SLOT(jugador4()));
 }
 
@@ -43,18 +45,19 @@ ventana1::~ventana1()
 }
 void ventana1::jugador1(){
     if(band){
-        //ui->
         band=0;
         GameOver *M =new GameOver;
-        M->setFondo(":/Escenario1.png");//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->setCarcjug(aux);
+        M->setCarcjug2(0);
+        M->setZ(":/Escenario1.png");//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->inicio();
         M->show();                        //Se muestra el MainWindow
         close();
-
     }
     else{
-    on_textBrowser_highlighted("        INGRESE EL SEGUNDO PERSONAJE ");
-    //ui->
-    band=1;
+        ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/fondo2")));
+        aux=0;
+        band=1;
     }
 }
 void ventana1::jugador2(){
@@ -62,46 +65,54 @@ void ventana1::jugador2(){
         //ui->
         band=0;
         GameOver *M =new GameOver;
-        M->setFondo(":/calle.jpg");//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->setCarcjug(aux);
+        M->setCarcjug2(1);
+        M->setZ(":/num2.png");//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->inicio();
         M->show();                        //Se muestra el MainWindow
         close();
 
     }
     else{
-    on_textBrowser_highlighted("        INGRESE EL SEGUNDO PERSONAJE ");
-    //ui->
+        ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/fondo2")));
+    aux=1;
     band=1;
     }
 }
 void ventana1::jugador3(){
     if(band){
-        //ui->
         band=0;
-        GameOver *M =new GameOver;       //Se Crea la variable MainWindow dentro de la función, siendo así una variable local
-        M->setFondo(":/Escenario1.png");
+        GameOver *M =new GameOver;
+        M->setCarcjug(aux);
+        M->setCarcjug2(2);//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->setZ(":/num3.png");
+        M->inicio();
         M->show();                        //Se muestra el MainWindow
         close();
 
     }
     else{
-    on_textBrowser_highlighted("        INGRESE EL SEGUNDO PERSONAJE ");
-    //ui->
+        ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/fondo2")));
+    aux=2;
     band=1;
     }
 }
 void ventana1::jugador4(){
     if(band){
-        //ui->
         band=0;
         GameOver *M =new GameOver;
-        M->setFondo(":/calle.jpg");//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->setCarcjug(aux);
+        M->setZ(":/num1.png");//Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+        M->setCarcjug2(3);
+        M->inicio();
         M->show();                        //Se muestra el MainWindow
         close();
 
     }
     else{
-    on_textBrowser_highlighted("        INGRESE EL SEGUNDO PERSONAJE ");
-    //ui->
+        ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/fondo2")));
+
+    aux=3;
     band=1;
     }
 }
@@ -112,8 +123,3 @@ void ventana1::on_volver_clicked()
     close();
 }
 
-void ventana1::on_textBrowser_highlighted(const QString &arg1)
-{
-    ui->textBrowser->clear();
-    ui->textBrowser->append(arg1);
-}

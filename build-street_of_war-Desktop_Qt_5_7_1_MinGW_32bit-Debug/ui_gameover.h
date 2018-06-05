@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,15 +24,25 @@ class Ui_GameOver
 {
 public:
     QGraphicsView *graphicsView;
+    QProgressBar *progressBar;
+    QProgressBar *progressBar_2;
 
     void setupUi(QWidget *GameOver)
     {
         if (GameOver->objectName().isEmpty())
             GameOver->setObjectName(QStringLiteral("GameOver"));
-        GameOver->resize(1600, 600);
+        GameOver->resize(1210, 610);
         graphicsView = new QGraphicsView(GameOver);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setGeometry(QRect(5, 21, 1600, 600));
+        graphicsView->setGeometry(QRect(5, 21, 1200, 600));
+        progressBar = new QProgressBar(GameOver);
+        progressBar->setObjectName(QStringLiteral("progressBar"));
+        progressBar->setGeometry(QRect(30, 30, 270, 25));
+        progressBar->setValue(24);
+        progressBar_2 = new QProgressBar(GameOver);
+        progressBar_2->setObjectName(QStringLiteral("progressBar_2"));
+        progressBar_2->setGeometry(QRect(800, 30, 270, 25));
+        progressBar_2->setValue(24);
 
         retranslateUi(GameOver);
 

@@ -8,6 +8,8 @@
 #include <QMainWindow>
 #include <QObject>
 #include <QGraphicsPixmapItem>
+#include<vector>
+using namespace std;
 class personajes:public QObject,
                  public QGraphicsPixmapItem
 
@@ -19,29 +21,32 @@ public:
     //void paint(QPainter *painter,const QStyleOptionGraphicsItem *option, QWidget *widget);
     personajes(QGraphicsItem* carr = 0);
     void CargarA();
-
+    void posicion();
+    void velocidad();
+    void aceleracion();
     float getPosx() const;
     void setPosx(float value);
 
     float getPosy() const;
     void setPosy(float value);
+    void mover(int ban,bool c);
+   void cambiar(bool a,int b,int c);
 
-    int getResistencia() const;
-    void setResistencia(int value);
+   int getVelx() const;
+   void setVelx(int value);
 
-    int getFuerza() const;
-    void setFuerza(int value);
-    void Saltar();
-    void Golpe();
-    void Patada();
 private:
+   vector<QPixmap> pictureA;
+   vector<vector<QPixmap>> pictureB;
+    vector<vector<QPixmap>> pictureC;
     float posx=0;
     float posy=0;
     int resistencia;
+    int velx=0;
+    int vely=0;
+    int acx=0,acy=0;
     int fuerza;
-    bool tipj=1;
-    //string imagen;
-    //QList<string>MovPers;
+    bool band=1,mov1=1,mov2=1;
 
 };
 

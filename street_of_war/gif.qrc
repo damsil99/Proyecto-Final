@@ -5,8 +5,33 @@
         <file>FondoStreet1.png</file>
         <file>Ken-hdstance.gif</file>
         <file>Guile-hdstance.gif</file>
-        <file>giphy.gif</file>
-        <file>calle.jpg</file>
         <file>Escenario1.png</file>
+        <file>C.4.1.gif</file>
+        <file>fondo2.jpeg</file>
+        <file>jugador1.jpeg</file>
+        <file>box.1.0.png</file>
+        <file>box.1.1.png</file>
+        <file>box.2.0.png</file>
+        <file>box.2.1.png</file>
+        <file>ken.1.0.png</file>
+        <file>ken.1.1.png</file>
+        <file>ken.2.0.png</file>
+        <file>ken.2.2.png</file>
+        <file>num1.png</file>
+        <file>num2.png</file>
+        <file>num3.png</file>
+        <file>ryu.3.1.png</file>
+        <file>box.3.0.png</file>
+        <file>box.3.1.png</file>
+        <file>box.4.0.png</file>
+        <file>box.4.1.png</file>
+        <file>ken.3.0.png</file>
+        <file>ken.3.1.png</file>
+        <file>ken.4.0.png</file>
+        <file>ken.4.1.png</file>
+        <file>ken.5.0.png</file>
+        <file>ken.5.1.png</file>
+        <file>box.5.0.png</file>
+        <file>box.5.1.png</file>
     </qresource>
 </RCC>

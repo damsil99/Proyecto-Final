@@ -27,9 +27,9 @@ private slots:
     void jugador3();
     void jugador4();
     void on_volver_clicked();
-    void on_textBrowser_highlighted(const QString &arg1);
 
 private:
+    int aux=0;
     Ui::ventana1 *ui;
     QGraphicsScene* scene;
     bool cnd=0,band=0;

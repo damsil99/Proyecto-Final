@@ -115,14 +115,39 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_gif.cpp
 debug/qrc_gif.cpp: ../street_of_war/gif.qrc \
 		C:/Qt/5.7/mingw53_32/bin/rcc.exe \
-		../street_of_war/Guile-hdstance.gif \
-		../street_of_war/Ryu-hdstance.gif \
+		../street_of_war/ken.5.0.png \
+		../street_of_war/ken.4.0.png \
+		../street_of_war/ken.5.1.png \
+		../street_of_war/jugador1.jpeg \
+		../street_of_war/ken.4.1.png \
 		../street_of_war/streetFondo.png \
-		../street_of_war/calle.jpg \
-		../street_of_war/Escenario1.png \
-		../street_of_war/giphy.gif \
+		../street_of_war/ryu.3.1.png \
+		../street_of_war/C.4.1.gif \
+		../street_of_war/ken.3.0.png \
+		../street_of_war/ken.2.0.png \
+		../street_of_war/ken.3.1.png \
+		../street_of_war/ken.1.0.png \
+		../street_of_war/ken.1.1.png \
+		../street_of_war/FondoStreet1.png \
+		../street_of_war/ken.2.2.png \
 		../street_of_war/Ken-hdstance.gif \
-		../street_of_war/FondoStreet1.png
+		../street_of_war/fondo2.jpeg \
+		../street_of_war/box.5.0.png \
+		../street_of_war/Guile-hdstance.gif \
+		../street_of_war/box.4.0.png \
+		../street_of_war/box.5.1.png \
+		../street_of_war/box.4.1.png \
+		../street_of_war/Escenario1.png \
+		../street_of_war/box.3.0.png \
+		../street_of_war/box.2.0.png \
+		../street_of_war/box.3.1.png \
+		../street_of_war/box.2.1.png \
+		../street_of_war/box.1.0.png \
+		../street_of_war/box.1.1.png \
+		../street_of_war/num1.png \
+		../street_of_war/Ryu-hdstance.gif \
+		../street_of_war/num2.png \
+		../street_of_war/num3.png
 	C:\Qt\5.7\mingw53_32\bin\rcc.exe -name gif ..\street_of_war\gif.qrc -o debug\qrc_gif.cpp
 
 compiler_moc_header_make_all: debug/moc_principal.cpp debug/moc_personajes.cpp debug/moc_ventana1.cpp debug/moc_gameover.cpp
@@ -244,6 +269,9 @@ debug/moc_principal.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/Qmovie \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qmovie.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qimagereader.h \
@@ -256,9 +284,6 @@ debug/moc_principal.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qjsonvalue.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qfactoryinterface.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/Qsize \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QLabel \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qframe.h \
@@ -496,6 +521,9 @@ debug/moc_ventana1.cpp: ../street_of_war/gameover.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/Qmovie \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qmovie.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qimagereader.h \
@@ -508,9 +536,6 @@ debug/moc_ventana1.cpp: ../street_of_war/gameover.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qjsonvalue.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qfactoryinterface.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/Qsize \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QLabel \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qframe.h \
@@ -632,6 +657,9 @@ debug/moc_gameover.cpp: ../street_of_war/personajes.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		../street_of_war/gameover.h \
 		C:/Qt/5.7/mingw53_32/bin/moc.exe
 	C:\Qt\5.7\mingw53_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.7/mingw53_32/mkspecs/win32-g++ -I"C:/Users/Daniel/Desktop/DaMSil/DaMSil/UdeA/Semestre II/Informatica II/Proyecto final/Juego/Proyecto-Final/street_of_war" -IC:/Qt/5.7/mingw53_32/include -IC:/Qt/5.7/mingw53_32/include/QtWidgets -IC:/Qt/5.7/mingw53_32/include/QtGui -IC:/Qt/5.7/mingw53_32/include/QtANGLE -IC:/Qt/5.7/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward ..\street_of_war\gameover.h -o debug\moc_gameover.cpp
@@ -782,6 +810,9 @@ debug/main.o: ../street_of_war/main.cpp ../street_of_war/principal.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/Qmovie \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qmovie.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qimagereader.h \
@@ -794,9 +825,6 @@ debug/main.o: ../street_of_war/main.cpp ../street_of_war/principal.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qjsonvalue.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qfactoryinterface.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/Qsize \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QLabel \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qframe.h \
@@ -924,6 +952,9 @@ debug/principal.o: ../street_of_war/principal.cpp ../street_of_war/principal.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/Qmovie \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qmovie.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qimagereader.h \
@@ -936,56 +967,10 @@ debug/principal.o: ../street_of_war/principal.cpp ../street_of_war/principal.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qjsonvalue.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qfactoryinterface.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/Qsize \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QLabel \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qframe.h \
-		ui_principal.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QVariant \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QAction \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QApplication \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QButtonGroup \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QHeaderView \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qvalidator.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qregularexpression.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qslider.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qstyle.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qrubberband.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QMenuBar \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qmenu.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QPushButton \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QStatusBar \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QTextBrowser \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qtextbrowser.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qtextedit.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qtextdocument.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qtextcursor.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qtextformat.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QToolBar \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qtoolbar.h
+		ui_principal.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\principal.o ..\street_of_war\principal.cpp
 
 debug/personajes.o: ../street_of_war/personajes.cpp ../street_of_war/personajes.h \
@@ -1218,6 +1203,9 @@ debug/ventana1.o: ../street_of_war/ventana1.cpp ../street_of_war/ventana1.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/Qmovie \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qmovie.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qimagereader.h \
@@ -1230,52 +1218,10 @@ debug/ventana1.o: ../street_of_war/ventana1.cpp ../street_of_war/ventana1.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qjsonvalue.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qfactoryinterface.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/Qsize \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QLabel \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qframe.h \
 		ui_ventana1.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QVariant \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QAction \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QApplication \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QButtonGroup \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsView \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qscrollarea.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QHeaderView \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qvalidator.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qregularexpression.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qslider.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qstyle.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qrubberband.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QPushButton \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QTextBrowser \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qtextbrowser.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qtextedit.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qtextdocument.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qtextcursor.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qtextformat.h \
 		../street_of_war/principal.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ventana1.o ..\street_of_war\ventana1.cpp
 
@@ -1394,37 +1340,10 @@ debug/gameover.o: ../street_of_war/gameover.cpp ../street_of_war/gameover.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
 		ui_gameover.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QVariant \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QAction \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QApplication \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qeventloop.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QButtonGroup \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QHeaderView \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qvalidator.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qregularexpression.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qslider.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qstyle.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qrubberband.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\gameover.o ..\street_of_war\gameover.cpp
 

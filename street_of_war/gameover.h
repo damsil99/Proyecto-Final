@@ -5,7 +5,9 @@
 #include<QGraphicsItem>
 #include <QGraphicsScene>
 #include<QKeyEvent>
+#include<QTimer>
 //#include<Q>
+//using namespace std;
 
 namespace Ui {
 class GameOver;
@@ -20,19 +22,37 @@ public:
     explicit GameOver(QWidget *parent = 0);
     ~GameOver();
 
-    QString getFondo() const;
-    void setFondo(const QString &value);
     void keyPressEvent(QKeyEvent *puss);
+    void keyReleaseEvent(QKeyEvent *push);
+
+    int getCarcjug() const;
+    void setCarcjug(int value);
+
+    int getCarcjug2() const;
+    void setCarcjug2(int value);
+
+    QString getZ() const;
+    void setZ(const QString &value);
+public slots:
+    void inicio();
+    void anim();
+    void mov();
+private slots:
+    void on_progressBar_2_valueChanged(int value);
+
+    void on_progressBar_valueChanged(int value);
 
 private:
-    bool saltar=0;
-    bool patada=0;
-    bool golpe=0;
+    bool saltar=0,saltar2=0,abajo=0,abajo2=0,proteg=0;
+    int carcjug=0,contsal1=0,vida1=100,vida2=100;
+    int carcjug2=0,contsal2=0,abajoaux=0,abajoaux2=0;
+    bool patada=0,patada2=0;
+    bool golpe=0,golpe2=0,proteg2=0,mov1=1,mov2=1;
+    bool a=0,b=0;
     personajes *jug1,*jug2;
     Ui::GameOver *ui;
-    QString Fondo;
-    QChar fondo;
-
+    QString Z;
+    QTimer *time,*time2;
     QGraphicsScene* pantalla;
     QGraphicsLineItem* linea;
     QGraphicsLineItem* alinea;

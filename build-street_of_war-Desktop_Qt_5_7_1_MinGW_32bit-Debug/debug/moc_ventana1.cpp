@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_ventana1_t {
-    QByteArrayData data[9];
-    char stringdata0[96];
+    QByteArrayData data[7];
+    char stringdata0[64];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,14 +35,11 @@ QT_MOC_LITERAL(2, 18, 0), // ""
 QT_MOC_LITERAL(3, 19, 8), // "jugador2"
 QT_MOC_LITERAL(4, 28, 8), // "jugador3"
 QT_MOC_LITERAL(5, 37, 8), // "jugador4"
-QT_MOC_LITERAL(6, 46, 17), // "on_volver_clicked"
-QT_MOC_LITERAL(7, 64, 26), // "on_textBrowser_highlighted"
-QT_MOC_LITERAL(8, 91, 4) // "arg1"
+QT_MOC_LITERAL(6, 46, 17) // "on_volver_clicked"
 
     },
     "ventana1\0jugador1\0\0jugador2\0jugador3\0"
-    "jugador4\0on_volver_clicked\0"
-    "on_textBrowser_highlighted\0arg1"
+    "jugador4\0on_volver_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -52,7 +49,7 @@ static const uint qt_meta_data_ventana1[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -60,12 +57,11 @@ static const uint qt_meta_data_ventana1[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   44,    2, 0x08 /* Private */,
-       3,    0,   45,    2, 0x08 /* Private */,
-       4,    0,   46,    2, 0x08 /* Private */,
-       5,    0,   47,    2, 0x08 /* Private */,
-       6,    0,   48,    2, 0x08 /* Private */,
-       7,    1,   49,    2, 0x08 /* Private */,
+       1,    0,   39,    2, 0x08 /* Private */,
+       3,    0,   40,    2, 0x08 /* Private */,
+       4,    0,   41,    2, 0x08 /* Private */,
+       5,    0,   42,    2, 0x08 /* Private */,
+       6,    0,   43,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -73,7 +69,6 @@ static const uint qt_meta_data_ventana1[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    8,
 
        0        // eod
 };
@@ -89,10 +84,10 @@ void ventana1::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 2: _t->jugador3(); break;
         case 3: _t->jugador4(); break;
         case 4: _t->on_volver_clicked(); break;
-        case 5: _t->on_textBrowser_highlighted((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
+    Q_UNUSED(_a);
 }
 
 const QMetaObject ventana1::staticMetaObject = {
@@ -120,13 +115,13 @@ int ventana1::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 6;
+        _id -= 5;
     }
     return _id;
 }
