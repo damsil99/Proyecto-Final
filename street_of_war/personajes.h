@@ -36,16 +36,15 @@ public:
    void setVelx(int value);
 
 private:
-   vector<QPixmap> pictureA;
-   vector<vector<QPixmap>> pictureB;
-    vector<vector<QPixmap>> pictureC;
+   //vector<QPixmap> pictureA;
+   //vector<vector<QPixmap>> pictureB;
+    //vector<vector<QPixmap>> pictureC;
     float posx=0;
     float posy=0;
     int resistencia;
     int velx=0;
     int vely=0;
     int acx=0,acy=0;
-    int fuerza;
     bool band=1,mov1=1,mov2=1;
 
 };

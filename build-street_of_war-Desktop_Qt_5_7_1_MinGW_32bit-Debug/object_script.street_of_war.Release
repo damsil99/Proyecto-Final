@@ -4,9 +4,11 @@ INPUT(
 ./release\personajes.o
 ./release\ventana1.o
 ./release\gameover.o
+./release\individual.o
 ./release\qrc_gif.o
 ./release\moc_principal.o
 ./release\moc_personajes.o
 ./release\moc_ventana1.o
 ./release\moc_gameover.o
+./release\moc_individual.o
 );

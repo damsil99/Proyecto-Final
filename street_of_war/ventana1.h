@@ -19,7 +19,11 @@ class ventana1 : public QWidget
 
 public:
     explicit ventana1(QWidget *parent = 0);
+    void inicio();
+    //void start();
     ~ventana1();
+
+    void setInd(bool value);
 
 private slots:
     void jugador1();
@@ -27,8 +31,9 @@ private slots:
     void jugador3();
     void jugador4();
     void on_volver_clicked();
-
+    void start();
 private:
+    bool ind=1;
     int aux=0;
     Ui::ventana1 *ui;
     QGraphicsScene* scene;

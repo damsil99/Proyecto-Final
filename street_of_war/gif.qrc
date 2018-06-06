@@ -33,5 +33,23 @@
         <file>ken.5.1.png</file>
         <file>box.5.0.png</file>
         <file>box.5.1.png</file>
+        <file>jug1.1.PNG</file>
+        <file>jug2.1.PNG</file>
+        <file>level1.jpg</file>
+        <file>nivel.1.0.png</file>
+        <file>nivel1.1.jpg</file>
+        <file>ryu.1.0.png</file>
+        <file>ryu.1.1.png</file>
+        <file>ryu.2.0.png</file>
+        <file>ryu.2.1.png</file>
+        <file>ryu.6.1.png</file>
+        <file>ryu.4.0.png</file>
+        <file>ryu.4.1.png</file>
+        <file>ryu.5.0.png</file>
+        <file>ryu.5.1.png</file>
+        <file>box.6.0.png</file>
+        <file>box.6.1.png</file>
+        <file>ken.6.0.png</file>
+        <file>ken.6.1.png</file>
     </qresource>
 </RCC>

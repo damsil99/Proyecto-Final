@@ -1,20 +1,19 @@
 #include "gameover.h"
 #include "ui_gameover.h"
 #include <QDebug>
+#include"principal.h"
 
 GameOver::GameOver(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::GameOver)
 {
+    //ui->graphicsView->scale(1,-1);
+    //ui->graphicsView->adjustSize();
     ui->setupUi(this);
     pantalla=new QGraphicsScene;
     ui->graphicsView->setScene(pantalla);
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
-
-    //ui->graphicsView->scale(1,-1);
-    //ui->graphicsView->adjustSize();
     pantalla->setSceneRect(0,0,1200,600);
-    
     linea=new QGraphicsLineItem(0,0,1200,0);
     alinea=new QGraphicsLineItem(0,0,0,600);
     blinea=new QGraphicsLineItem(1200,0,1200,600);
@@ -29,7 +28,70 @@ GameOver::GameOver(QWidget *parent) :
     time=new QTimer;
     connect(time,SIGNAL(timeout()),this,SLOT(mov()));
     time->start(500);
-
+    pictureA.push_back(QPixmap(":/ken.1.0.png"));
+            pictureA.push_back(QPixmap(":/ken.2.0.png"));
+            pictureA.push_back(QPixmap(":/ken.3.0.png"));
+            pictureA.push_back(QPixmap(":/ken.4.0.png"));
+            pictureA.push_back(QPixmap(":/ken.5.0.png"));
+            pictureA.push_back(QPixmap(":/ken.6.0.png"));
+            pictureB.push_back(pictureA);
+            pictureA.clear();
+            pictureA.push_back(QPixmap(":/ryu.1.0.png"));
+            pictureA.push_back(QPixmap(":/ryu.2.0.png"));
+            pictureA.push_back(QPixmap(":/ryu.3.0.png"));
+            pictureA.push_back(QPixmap(":/ryu.4.0.png"));
+            pictureA.push_back(QPixmap(":/ryu.5.0.png"));
+            pictureA.push_back(QPixmap(":/ryu.6.0.png"));
+            pictureB.push_back(pictureA);
+            pictureA.clear();
+            pictureA.push_back(QPixmap(":/box.1.0.png"));
+            pictureA.push_back(QPixmap(":/box.2.0.png"));
+            pictureA.push_back(QPixmap(":/box.3.0.png"));
+            pictureA.push_back(QPixmap(":/box.4.0.png"));
+            pictureA.push_back(QPixmap(":/box.5.0.png"));
+            pictureA.push_back(QPixmap(":/box.6.0.png"));
+            pictureB.push_back(pictureA);
+            pictureA.clear();
+            pictureA.push_back(QPixmap(":/kil.1.0.png"));
+            pictureA.push_back(QPixmap(":/kil.2.0.png"));
+            pictureA.push_back(QPixmap(":/kil.3.0.png"));
+            pictureA.push_back(QPixmap(":/kil.4.0.png"));
+            pictureA.push_back(QPixmap(":/kil.5.0.png"));
+            pictureA.push_back(QPixmap(":/kil.6.0.png"));
+            pictureB.push_back(pictureA);
+            pictureA.clear();
+            pictureA.push_back(QPixmap(":/ken.1.1.png"));
+            pictureA.push_back(QPixmap(":/ken.2.2.png"));
+            pictureA.push_back(QPixmap(":/ken.3.1.png"));
+            pictureA.push_back(QPixmap(":/ken.4.1.png"));
+            pictureA.push_back(QPixmap(":/ken.5.1.png"));
+            pictureA.push_back(QPixmap(":/ken.6.1.png"));
+            pictureC.push_back(pictureA);
+            pictureA.clear();
+            pictureA.push_back(QPixmap(":/ryu.1.1.png"));
+            pictureA.push_back(QPixmap(":/ryu.2.1.png"));
+            pictureA.push_back(QPixmap(":/ryu.3.1.png"));
+            pictureA.push_back(QPixmap(":/ryu.4.1.png"));
+            pictureA.push_back(QPixmap(":/ryu.5.1.png"));
+            pictureA.push_back(QPixmap(":/ryu.6.1.png"));
+            pictureC.push_back(pictureA);
+            pictureA.clear();
+            pictureA.push_back(QPixmap(":/box.1.1.png"));
+            pictureA.push_back(QPixmap(":/box.2.1.png"));
+            pictureA.push_back(QPixmap(":/box.3.1.png"));
+            pictureA.push_back(QPixmap(":/box.4.1.png"));
+            pictureA.push_back(QPixmap(":/box.5.1.png"));
+            pictureA.push_back(QPixmap(":/box.6.1.png"));
+            pictureC.push_back(pictureA);
+            pictureA.clear();
+            pictureA.push_back(QPixmap(":/kil.1.1.png"));
+            pictureA.push_back(QPixmap(":/kil.2.1.png"));
+            pictureA.push_back(QPixmap(":/kil.3.1.png"));
+            pictureA.push_back(QPixmap(":/kil.4.1.png"));
+            pictureA.push_back(QPixmap(":/kil.5.1.png"));
+            pictureA.push_back(QPixmap(":/kil.6.1.png"));
+            pictureC.push_back(pictureA);
+            pictureA.clear();
 
 }
 
@@ -112,19 +174,54 @@ void GameOver::keyPressEvent(QKeyEvent *puss){
     if(puss->key()==Qt::Key_K)abajo2=1;
     jug1->posicion();
     jug2->posicion();
-    jug1->CargarA();
-    jug2->CargarA();
 }
 void GameOver::keyReleaseEvent(QKeyEvent *push){
     if(push->key()==Qt::Key_A)jug1->setVelx(0);
     if(push->key()==Qt::Key_D)jug1->setVelx(0);
     if(push->key()==Qt::Key_J)jug2->setVelx(0);
-    if(push->key()==Qt::Key_L)jug1->setVelx(0);
+    if(push->key()==Qt::Key_L)jug2->setVelx(0);
 }
 
 
 void GameOver::anim()
 {
+    if(vida1<=0){
+        jug1->setPixmap(pictureB[carcjug][5]);//":/caido1.0.png"));
+        jug1->setPos(100,jug1->getPosy()-30);
+        //jug2->setPos(1000,jug2->getPosy());
+        on_progressBar_valueChanged(0);
+        time2->stop();
+        time->stop();
+        ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/jug2.1.PNG")));
+        QPushButton *button = new QPushButton("&   Reiniciar   ", this);
+        QPushButton *button2 = new QPushButton("& Menu Pincipal   ", this);
+        button->setStyleSheet("background-color: purple");
+        button->show();
+        button2->show();
+        button->setGeometry(450,200,300,80);
+        button2->setGeometry(450,350,300,80);
+        connect(button,SIGNAL(clicked(bool)),this,SLOT(opcion()));
+        connect(button2,SIGNAL(clicked(bool)),this,SLOT(opcion2()));
+    }
+    if(vida2<=0){
+        jug2->setPixmap(pictureC[carcjug2][5]);//QPixmap(":/caido3.1.png"));
+        jug1->setPos(100,jug1->getPosy());
+        jug2->setPos(0,jug2->getPosy()+30);
+        on_progressBar_2_valueChanged(0);
+        time2->stop();
+        time->stop();
+        ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/jug1.1.PNG")));
+        QPushButton *button = new QPushButton("&   Reiniciar   ", this);
+        QPushButton *button2 = new QPushButton("& Menu Pincipal   ", this);
+        button->setStyleSheet("background-color: purple");
+        button2->setStyleSheet("background-color: purple");
+        button->show();
+        button2->show();
+        button->setGeometry(450,200,300,80);
+        button2->setGeometry(450,350,300,80);
+        connect(button,SIGNAL(clicked(bool)),this,SLOT(opcion()));
+        connect(button2,SIGNAL(clicked(bool)),this,SLOT(opcion2()));
+    }
 
     if(saltar){
         mov1=0;
@@ -164,62 +261,62 @@ void GameOver::anim()
     }
     if(patada){
         //mov1=0;
-        jug1->setPixmap(QPixmap(":/ken.3.0.png"));
+        jug1->setPixmap(pictureB[carcjug][2]);//QPixmap(":/ken.3.0.png"));
         if(jug1->collidesWithItem(jug2)){
             if(proteg2){
-                vida2-=2;
+                vida2-=1;
             }else {
             if(patada2||golpe2){
                 vida2-=4;
             }
             if(!patada2 && !golpe2 && !proteg2){
-                vida2-=6;
+                vida2-=7;
             }}
 
         }
-        on_progressBar_2_valueChanged(vida2);
+        //on_progressBar_2_valueChanged(vida2);
         patada=0;
 
     }
     if(patada2){
         //mov2=0;
         jug2->setPos(jug2->getPosx()-15,jug2->getPosy());
-        jug2->setPixmap(QPixmap(":/box.3.1.png"));
+        jug2->setPixmap(pictureC[carcjug2][2]);//":/box.3.1.png"));
         if(jug2->collidesWithItem(jug1)){
             jug2->setPos(jug2->getPosx()+3,jug2->getPosy());
             if(proteg){
-                vida1-=2;
+                vida1-=1;
             }else{
             if(patada||golpe){
                 vida1-=4;
             }
             if(!patada && !golpe && !proteg){
-                vida1-=8;
+                vida1-=7;
             }
             }}
         patada2=0;
-        on_progressBar_valueChanged(vida1);
+        //on_progressBar_valueChanged(vida1);
         }
     if(golpe){
-        jug1->setPixmap(QPixmap(":/ken.4.0.png"));
+        jug1->setPixmap(pictureB[carcjug][3]);//QPixmap(":/ken.4.0.png"));
         if(jug1->collidesWithItem(jug2)){
             if(proteg2){
-                vida2-=2;
+                vida2-=1;
             }
             else{
             if(patada2||golpe2){
-                vida2-=4;
+                vida2-=3;
             }
             if(!patada2 && !golpe2 && !proteg2){
                 vida2-=6;
             }}
         }
         golpe=0;
-        on_progressBar_2_valueChanged(vida2);
+        //on_progressBar_2_valueChanged(vida2);
     }
     if(golpe2){
         jug2->setPos(jug2->getPosx()-15,jug2->getPosy());
-        jug2->setPixmap(QPixmap(":/box.4.1.png"));
+        jug2->setPixmap(pictureC[carcjug2][3]);//QPixmap(":/box.4.1.png"));
         if(jug2->collidesWithItem(jug1)){
             jug2->setPos(jug2->getPosx(),jug2->getPosy());
             if(proteg){
@@ -227,10 +324,10 @@ void GameOver::anim()
             }
             else{
             if(patada||golpe){
-                vida1-=4;
+                vida1-=3;
             }
             if(!patada && !golpe && !proteg){
-                vida1-=8;
+                vida1-=6;
             }}
         }
         golpe2=0;
@@ -239,7 +336,7 @@ void GameOver::anim()
     if(abajo){
         mov1=0;
         saltar=0;
-        jug1->setPixmap(QPixmap(":/ken.5.0.png"));
+        jug1->setPixmap(pictureB[carcjug][4]);//QPixmap(":/ken.5.0.png"));
         jug1->setPos(jug1->getPosx(),jug1->getPosy()+30);
         abajoaux+=1;
         if(abajoaux==4){
@@ -252,7 +349,7 @@ void GameOver::anim()
     if(abajo2){
         mov2=0;
         saltar2=0;
-        jug2->setPixmap(QPixmap(":/box.5.1.png"));
+        jug2->setPixmap(pictureC[carcjug2][4]);//QPixmap(":/box.5.1.png"));
         jug2->setPos(jug2->getPosx(),jug2->getPosy()+30);
         abajoaux2+=1;
         if(abajoaux2==4){
@@ -265,27 +362,30 @@ void GameOver::anim()
     /*
     if(proteg){}
     if(proteg2){}*/
+    ui->lcdNumber->display(jug1->getPosx());
+    ui->lcdNumber_2->display(jug2->getPosx());
+    on_progressBar_valueChanged(vida1);
     on_progressBar_2_valueChanged(vida2);
 }
 void GameOver::mov()
 {
     //if(z){
     if(mov1){
-        jug1->setPixmap(QPixmap(":/ken.1.0.png"));
+        jug1->setPixmap(pictureB[carcjug][0]);//QPixmap(":/ken.1.0.png"));
         mov1=0;
     }
     else{
-        jug1->setPixmap(QPixmap(":/ken.2.0.png"));
+        jug1->setPixmap(pictureB[carcjug][1]);//QPixmap(":/ken.2.0.png"));
         mov1=1;
     //}
         }
     //else{
         if(mov2){
-            jug2->setPixmap(QPixmap(":/box.1.1.png"));
+            jug2->setPixmap(pictureC[carcjug2][0]);//QPixmap(":/box.1.1.png"));
             mov2=0;
         }
         else{
-            jug2->setPixmap(QPixmap(":/box.2.1.png"));
+            jug2->setPixmap(pictureC[carcjug2][1]);//QPixmap(":/box.2.1.png"));
             mov2=1;
         }
    // }
@@ -341,3 +441,18 @@ void GameOver::setZ(const QString &value)
 {
     Z = value;
 }
+void GameOver::opcion(){
+    GameOver *M =new GameOver;       //Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+    M->show();                        //Se muestra el MainWindow
+    close();
+}
+void GameOver::opcion2(){
+    principal *M =new principal;       //Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+    M->show();                        //Se muestra el MainWindow
+    close();
+}
+
+
+
+
+

@@ -5,6 +5,7 @@
 #include<QGraphicsItem>
 #include <QGraphicsScene>
 #include<QKeyEvent>
+#include <QPushButton>
 #include<QTimer>
 //#include<Q>
 //using namespace std;
@@ -37,6 +38,8 @@ public slots:
     void inicio();
     void anim();
     void mov();
+    void opcion();
+    void opcion2();
 private slots:
     void on_progressBar_2_valueChanged(int value);
 
@@ -49,6 +52,9 @@ private:
     bool patada=0,patada2=0;
     bool golpe=0,golpe2=0,proteg2=0,mov1=1,mov2=1;
     bool a=0,b=0;
+    vector<QPixmap> pictureA;
+    vector<vector<QPixmap>> pictureB;
+     vector<vector<QPixmap>> pictureC;
     personajes *jug1,*jug2;
     Ui::GameOver *ui;
     QString Z;

@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QWidget>
 
@@ -26,6 +27,8 @@ public:
     QGraphicsView *graphicsView;
     QProgressBar *progressBar;
     QProgressBar *progressBar_2;
+    QLCDNumber *lcdNumber;
+    QLCDNumber *lcdNumber_2;
 
     void setupUi(QWidget *GameOver)
     {
@@ -43,6 +46,12 @@ public:
         progressBar_2->setObjectName(QStringLiteral("progressBar_2"));
         progressBar_2->setGeometry(QRect(800, 30, 270, 25));
         progressBar_2->setValue(24);
+        lcdNumber = new QLCDNumber(GameOver);
+        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
+        lcdNumber->setGeometry(QRect(140, 80, 64, 41));
+        lcdNumber_2 = new QLCDNumber(GameOver);
+        lcdNumber_2->setObjectName(QStringLiteral("lcdNumber_2"));
+        lcdNumber_2->setGeometry(QRect(680, 110, 64, 23));
 
         retranslateUi(GameOver);
 

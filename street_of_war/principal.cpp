@@ -26,6 +26,7 @@ principal::~principal()
 
 void principal::on_mult_clicked()
 {
+    N->setInd(0);
     N->show();
 
     close();
@@ -33,5 +34,8 @@ void principal::on_mult_clicked()
 
 void principal::on_ind_clicked()
 {
+    N->setInd(1);
+    N->show();
 
+    close();
 }

@@ -28,18 +28,21 @@ SOURCES += \
         principal.cpp \
     personajes.cpp \
     ventana1.cpp \
-    gameover.cpp
+    gameover.cpp \
+    individual.cpp
 
 HEADERS += \
         principal.h \
     personajes.h \
     ventana1.h \
-    gameover.h
+    gameover.h \
+    individual.h
 
 FORMS += \
         principal.ui \
     ventana1.ui \
-    gameover.ui
+    gameover.ui \
+    individual.ui
 
 RESOURCES += \
     gif.qrc

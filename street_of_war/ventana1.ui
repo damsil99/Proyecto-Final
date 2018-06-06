@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>467</width>
-    <height>300</height>
+    <width>508</width>
+    <height>401</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QGraphicsView" name="graphicsView">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>400</width>
-     <height>271</height>
+     <x>0</x>
+     <y>0</y>
+     <width>506</width>
+     <height>400</height>
     </rect>
    </property>
   </widget>
@@ -42,8 +42,8 @@
   <widget class="QPushButton" name="kent">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>90</y>
+     <x>350</x>
+     <y>100</y>
      <width>70</width>
      <height>70</height>
     </rect>
@@ -58,8 +58,8 @@
   <widget class="QPushButton" name="sold">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>180</y>
+     <x>350</x>
+     <y>220</y>
      <width>70</width>
      <height>70</height>
     </rect>
@@ -75,7 +75,7 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>170</y>
+     <y>220</y>
      <width>70</width>
      <height>70</height>
     </rect>
@@ -90,8 +90,8 @@
   <widget class="QPushButton" name="volver">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>220</y>
+     <x>400</x>
+     <y>310</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -116,8 +116,8 @@
   <widget class="QLabel" name="gif2">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>90</y>
+     <x>350</x>
+     <y>100</y>
      <width>70</width>
      <height>70</height>
     </rect>
@@ -130,7 +130,7 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>170</y>
+     <y>220</y>
      <width>70</width>
      <height>70</height>
     </rect>
@@ -142,8 +142,8 @@
   <widget class="QLabel" name="gif4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>180</y>
+     <x>350</x>
+     <y>220</y>
      <width>70</width>
      <height>70</height>
     </rect>

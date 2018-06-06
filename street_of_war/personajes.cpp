@@ -3,14 +3,12 @@ using namespace std;
 personajes::personajes(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
 //personajes::personajes()
 {
-        pictureA.push_back(QPixmap(":/ken.1.0.png"));
+        /*pictureA.push_back(QPixmap(":/ken.1.0.png"));
         pictureA.push_back(QPixmap(":/ken.2.0.png"));
         pictureA.push_back(QPixmap(":/ken.3.0.png"));
         pictureA.push_back(QPixmap(":/ken.4.0.png"));
         pictureA.push_back(QPixmap(":/ken.5.0.png"));
         pictureA.push_back(QPixmap(":/ken.6.0.png"));
-        pictureA.push_back(QPixmap(":/ken.7.0.png"));
-        pictureA.push_back(QPixmap(":/ken.8.0.png"));
         pictureB.push_back(pictureA);
         pictureA.clear();
         pictureA.push_back(QPixmap(":/ryu.1.0.png"));
@@ -19,8 +17,6 @@ personajes::personajes(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
         pictureA.push_back(QPixmap(":/ryu.4.0.png"));
         pictureA.push_back(QPixmap(":/ryu.5.0.png"));
         pictureA.push_back(QPixmap(":/ryu.6.0.png"));
-        pictureA.push_back(QPixmap(":/ryu.7.0.png"));
-        pictureA.push_back(QPixmap(":/ryu.8.0.png"));
         pictureB.push_back(pictureA);
         pictureA.clear();
         pictureA.push_back(QPixmap(":/box.1.0.png"));
@@ -29,8 +25,6 @@ personajes::personajes(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
         pictureA.push_back(QPixmap(":/box.4.0.png"));
         pictureA.push_back(QPixmap(":/box.5.0.png"));
         pictureA.push_back(QPixmap(":/box.6.0.png"));
-        pictureA.push_back(QPixmap(":/box.7.0.png"));
-        pictureA.push_back(QPixmap(":/box.8.0.png"));
         pictureB.push_back(pictureA);
         pictureA.clear();
         pictureA.push_back(QPixmap(":/kil.1.0.png"));
@@ -39,8 +33,6 @@ personajes::personajes(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
         pictureA.push_back(QPixmap(":/kil.4.0.png"));
         pictureA.push_back(QPixmap(":/kil.5.0.png"));
         pictureA.push_back(QPixmap(":/kil.6.0.png"));
-        pictureA.push_back(QPixmap(":/kil.7.0.png"));
-        pictureA.push_back(QPixmap(":/kil.8.0.png"));
         pictureB.push_back(pictureA);
         pictureA.clear();
         pictureA.push_back(QPixmap(":/ken.1.1.png"));
@@ -49,8 +41,6 @@ personajes::personajes(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
         pictureA.push_back(QPixmap(":/ken.4.1.png"));
         pictureA.push_back(QPixmap(":/ken.5.1.png"));
         pictureA.push_back(QPixmap(":/ken.6.1.png"));
-        pictureA.push_back(QPixmap(":/ken.7.1.png"));
-        pictureA.push_back(QPixmap(":/ken.8.1.png"));
         pictureC.push_back(pictureA);
         pictureA.clear();
         pictureA.push_back(QPixmap(":/ryu.1.1.png"));
@@ -59,8 +49,6 @@ personajes::personajes(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
         pictureA.push_back(QPixmap(":/ryu.4.1.png"));
         pictureA.push_back(QPixmap(":/ryu.5.1.png"));
         pictureA.push_back(QPixmap(":/ryu.6.1.png"));
-        pictureA.push_back(QPixmap(":/ryu.7.1.png"));
-        pictureA.push_back(QPixmap(":/ryu.8.1.png"));
         pictureC.push_back(pictureA);
         pictureA.clear();
         pictureA.push_back(QPixmap(":/box.1.1.png"));
@@ -69,8 +57,6 @@ personajes::personajes(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
         pictureA.push_back(QPixmap(":/box.4.1.png"));
         pictureA.push_back(QPixmap(":/box.5.1.png"));
         pictureA.push_back(QPixmap(":/box.6.1.png"));
-        pictureA.push_back(QPixmap(":/box.7.1.png"));
-        pictureA.push_back(QPixmap(":/box.8.1.png"));
         pictureC.push_back(pictureA);
         pictureA.clear();
         pictureA.push_back(QPixmap(":/kil.1.1.png"));
@@ -79,10 +65,8 @@ personajes::personajes(QGraphicsItem* carr):QGraphicsPixmapItem(carr)
         pictureA.push_back(QPixmap(":/kil.4.1.png"));
         pictureA.push_back(QPixmap(":/kil.5.1.png"));
         pictureA.push_back(QPixmap(":/kil.6.1.png"));
-        pictureA.push_back(QPixmap(":/kil.7.1.png"));
-        pictureA.push_back(QPixmap(":/kil.8.1.png"));
         pictureC.push_back(pictureA);
-        pictureC.clear();
+        pictureA.clear();*/
         //setPixmap(QPixmap(":/cal"));
         //CargarA();
 }
@@ -103,7 +87,7 @@ void personajes::paint(QPainter *painter, const QStyleOptionGraphicsItem *option
     //if(cont==0){
         //cont=1;
     //}
-    /*else{
+    else{
         pixmap.load(":/war");
         painter->drawPixmap(boundingRect(),pixmap,pixmap.rect());
         cont=0;
@@ -168,8 +152,8 @@ void personajes::setPosy(float value)
      setPos(posx,posy);
 }
 
-void personajes::mover(int ban,bool z)
-{/*
+/*void personajes::mover(int ban,bool z)
+{
     if(z){
     if(mov1){
         setPixmap(pictureB[ban][0]);
@@ -189,10 +173,10 @@ void personajes::mover(int ban,bool z)
             mov2=1;
         }
     }
-*/
 }
+*/
 
-void personajes::cambiar(bool a, int b, int c)
+/*void personajes::cambiar(bool a, int b, int c)
 {
     if(a){
         setPixmap(pictureB[0][c]);
@@ -200,7 +184,7 @@ void personajes::cambiar(bool a, int b, int c)
     else{
         setPixmap(pictureC[2][c]);
     }
-}
+}*/
 
 int personajes::getVelx() const
 {
@@ -227,6 +211,7 @@ void personajes::posicion()
 {
     posx=posx+(velx*3);
     posy=posy+(vely )+((acy)/2);
+    setPos(posx,posy);
 }
 void personajes::velocidad()
 {
