@@ -12,7 +12,7 @@ namespace Ui {
 class Cargar;
 }
 
-class Cargar : public QWidget//,
+class Cargar : public QMainWindow//,
         //public QMainWindow
 {
     Q_OBJECT

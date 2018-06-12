@@ -30,7 +30,8 @@ SOURCES += \
     ventana1.cpp \
     gameover.cpp \
     individual.cpp \
-    cargar.cpp
+    cargar.cpp \
+    maquina.cpp
 
 HEADERS += \
         principal.h \
@@ -38,14 +39,18 @@ HEADERS += \
     ventana1.h \
     gameover.h \
     individual.h \
-    cargar.h
+    cargar.h \
+    maquina.h
 
 FORMS += \
         principal.ui \
     ventana1.ui \
     gameover.ui \
     individual.ui \
-    cargar.ui
+    cargar.ui \
+    maquina.ui
 
 RESOURCES += \
     gif.qrc
+
+
