@@ -17,6 +17,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QProgressBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -29,6 +30,8 @@ public:
     QProgressBar *progressBar_2;
     QLCDNumber *lcdNumber;
     QLCDNumber *lcdNumber_2;
+    QPushButton *button;
+    QPushButton *button2;
 
     void setupUi(QWidget *GameOver)
     {
@@ -52,6 +55,12 @@ public:
         lcdNumber_2 = new QLCDNumber(GameOver);
         lcdNumber_2->setObjectName(QStringLiteral("lcdNumber_2"));
         lcdNumber_2->setGeometry(QRect(680, 110, 64, 23));
+        button = new QPushButton(GameOver);
+        button->setObjectName(QStringLiteral("button"));
+        button->setGeometry(QRect(360, 170, 75, 23));
+        button2 = new QPushButton(GameOver);
+        button2->setObjectName(QStringLiteral("button2"));
+        button2->setGeometry(QRect(360, 250, 75, 23));
 
         retranslateUi(GameOver);
 
@@ -61,6 +70,8 @@ public:
     void retranslateUi(QWidget *GameOver)
     {
         GameOver->setWindowTitle(QApplication::translate("GameOver", "Form", Q_NULLPTR));
+        button->setText(QApplication::translate("GameOver", "PushButton", Q_NULLPTR));
+        button2->setText(QApplication::translate("GameOver", "PushButton", Q_NULLPTR));
     } // retranslateUi
 
 };

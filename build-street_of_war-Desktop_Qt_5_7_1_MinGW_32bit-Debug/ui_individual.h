@@ -16,6 +16,7 @@
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QProgressBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,6 +27,8 @@ public:
     QGraphicsView *graphicsView;
     QProgressBar *progressBar;
     QProgressBar *progressBar_2;
+    QPushButton *button;
+    QPushButton *button2;
 
     void setupUi(QWidget *individual)
     {
@@ -43,6 +46,12 @@ public:
         progressBar_2->setObjectName(QStringLiteral("progressBar_2"));
         progressBar_2->setGeometry(QRect(860, 30, 300, 25));
         progressBar_2->setValue(24);
+        button = new QPushButton(individual);
+        button->setObjectName(QStringLiteral("button"));
+        button->setGeometry(QRect(370, 130, 101, 51));
+        button2 = new QPushButton(individual);
+        button2->setObjectName(QStringLiteral("button2"));
+        button2->setGeometry(QRect(360, 200, 101, 51));
 
         retranslateUi(individual);
 
@@ -52,6 +61,8 @@ public:
     void retranslateUi(QWidget *individual)
     {
         individual->setWindowTitle(QApplication::translate("individual", "Form", Q_NULLPTR));
+        button->setText(QApplication::translate("individual", "PushButton", Q_NULLPTR));
+        button2->setText(QApplication::translate("individual", "PushButton", Q_NULLPTR));
     } // retranslateUi
 
 };

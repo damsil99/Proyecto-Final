@@ -1,5 +1,6 @@
 #include "principal.h"
 #include "ui_principal.h"
+#include"cargar.h"
 
 principal::principal(QWidget *parent) :
     QMainWindow(parent),
@@ -34,8 +35,9 @@ void principal::on_mult_clicked()
 
 void principal::on_ind_clicked()
 {
-    N->setInd(1);
-    N->show();
-
+    //N->setInd(1);
+    //N->show();
+    Cargar *A=new Cargar;
+    A->show();
     close();
 }

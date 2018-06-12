@@ -28,7 +28,8 @@ GameOver::GameOver(QWidget *parent) :
     time=new QTimer;
     connect(time,SIGNAL(timeout()),this,SLOT(mov()));
     time->start(500);
-    pictureA.push_back(QPixmap(":/ken.1.0.png"));
+
+            pictureA.push_back(QPixmap(":/ken.1.0.png"));
             pictureA.push_back(QPixmap(":/ken.2.0.png"));
             pictureA.push_back(QPixmap(":/ken.3.0.png"));
             pictureA.push_back(QPixmap(":/ken.4.0.png"));
@@ -92,6 +93,8 @@ GameOver::GameOver(QWidget *parent) :
             pictureA.push_back(QPixmap(":/kil.6.1.png"));
             pictureC.push_back(pictureA);
             pictureA.clear();
+            ui->button->hide();
+            ui->button2->hide();
 
 }
 
@@ -193,15 +196,17 @@ void GameOver::anim()
         time2->stop();
         time->stop();
         ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/jug2.1.PNG")));
-        QPushButton *button = new QPushButton("&   Reiniciar   ", this);
-        QPushButton *button2 = new QPushButton("& Menu Pincipal   ", this);
-        button->setStyleSheet("background-color: purple");
-        button->show();
-        button2->show();
-        button->setGeometry(450,200,300,80);
-        button2->setGeometry(450,350,300,80);
-        connect(button,SIGNAL(clicked(bool)),this,SLOT(opcion()));
-        connect(button2,SIGNAL(clicked(bool)),this,SLOT(opcion2()));
+        //QPushButton *button = new QPushButton("&   Reiniciar   ", this);
+        //QPushButton *button2 = new QPushButton("& Menu Pincipal   ", this);
+        ui->button->setText("&   Reiniciar   ");
+        ui->button2->setText("& Menu Pincipal   ");
+        ui->button->setStyleSheet("background-color: purple");
+        ui->button->show();
+        ui->button2->show();
+        ui->button->setGeometry(450,200,300,80);
+        ui->button2->setGeometry(450,350,300,80);
+        connect(ui->button,SIGNAL(clicked(bool)),this,SLOT(opcion()));
+        connect(ui->button2,SIGNAL(clicked(bool)),this,SLOT(opcion2()));
     }
     if(vida2<=0){
         jug2->setPixmap(pictureC[carcjug2][5]);//QPixmap(":/caido3.1.png"));
@@ -211,16 +216,18 @@ void GameOver::anim()
         time2->stop();
         time->stop();
         ui->graphicsView->setBackgroundBrush(QBrush(QImage(":/jug1.1.PNG")));
-        QPushButton *button = new QPushButton("&   Reiniciar   ", this);
-        QPushButton *button2 = new QPushButton("& Menu Pincipal   ", this);
-        button->setStyleSheet("background-color: purple");
-        button2->setStyleSheet("background-color: purple");
-        button->show();
-        button2->show();
-        button->setGeometry(450,200,300,80);
-        button2->setGeometry(450,350,300,80);
-        connect(button,SIGNAL(clicked(bool)),this,SLOT(opcion()));
-        connect(button2,SIGNAL(clicked(bool)),this,SLOT(opcion2()));
+        //QPushButton *button = new QPushButton("&   Reiniciar   ", this);
+        //QPushButton *button2 = new QPushButton("& Menu Pincipal   ", this);
+        ui->button->setText("&   Reiniciar   ");
+        ui->button2->setText("& Menu Pincipal   ");
+        ui->button->setStyleSheet("background-color: purple");
+        ui->button2->setStyleSheet("background-color: purple");
+        ui->button->show();
+        ui->button2->show();
+        ui->button->setGeometry(450,200,300,80);
+        ui->button2->setGeometry(450,350,300,80);
+        connect(ui->button,SIGNAL(clicked(bool)),this,SLOT(opcion()));
+        connect(ui->button2,SIGNAL(clicked(bool)),this,SLOT(opcion2()));
     }
 
     if(saltar){
@@ -359,6 +366,12 @@ void GameOver::anim()
             jug2->setPos(jug2->getPosx(),jug2->getPosy());
         }
     }
+    if((jug2->getPosx())-(jug1->getPosx())<96){
+        jug1->setVelx(-3);
+        jug2->setVelx(3);
+        jug1->posicion();
+        jug2->posicion();
+    }
     /*
     if(proteg){}
     if(proteg2){}*/
@@ -442,9 +455,18 @@ void GameOver::setZ(const QString &value)
     Z = value;
 }
 void GameOver::opcion(){
-    GameOver *M =new GameOver;       //Se Crea la variable MainWindow dentro de la función, siendo así una variable local
+    /*GameOver *M =new GameOver;       //Se Crea la variable MainWindow dentro de la función, siendo así una variable local
     M->show();                        //Se muestra el MainWindow
-    close();
+    close();*/
+    vida1=100;
+    vida2=100;
+    ui->button->hide();
+    ui->button2->hide();
+    delete jug1;
+    delete jug2;
+    inicio();
+    time->start(500);
+    time2->start(100);
 }
 void GameOver::opcion2(){
     principal *M =new principal;       //Se Crea la variable MainWindow dentro de la función, siendo así una variable local
